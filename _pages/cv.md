@@ -11,54 +11,36 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Nuclear Astrophysics, Florida State University, Tallahassee, FL, Present
+* M.S. in Physics, Florida State University, Tallahassee, FL, 2020
+* M.Sc. in Physics, BITS Pilani - Hyderabad Campus, India, 2018
+* B.E. in Chemical Engineering, BITS Pilani - Hyderabad Campus, India, 2018
 
-Work experience
+Research Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* **Graduate Research Assistant** | May 2020 – Present
+  * John D. Fox Superconducting Linear Accelerator Laboratory, FSU
+  * Supervisor: Prof. Ingo Wiedenhöver
+  * Conceptualized and implemented a novel design upgrade to the internal tracking proportional counter.
+  * Upgraded Digital Data Acquisition (DAQ) system using CAEN 1740 & 1725 digitizers.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* **Junior Research Fellow** | Aug 2018 – July 2019
+  * Tata Institute of Fundamental Research (TIFR), Mumbai
+  * Evaluated timing and energy response of $LaBr_3(Ce)$ detectors for the INGA array.
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Technical Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Detector Instrumentation:** Custom detector design, Gas-filled Proportional Counters, Silicon strip detectors, HPGe detectors, High-vacuum systems.
+* **Programming:** C++, Python, ROOT, $\LaTeX$, MATLAB.
+* **Simulation/Modeling:** Garfield++, Gmsh, Elmer, SRIM, LISE++, SolidWorks, COMSOL.
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
 Teaching
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
+* **PHY 2054 (College Physics B):** Undergraduate lab sessions (Electromagnetism, Optics), 2020.
+* **PHY 2053 (College Physics A):** Undergraduate lab sessions (Mechanics, Thermodynamics), 2019–2020.
+
+Awards
 ======
-* Currently signed in to 43 different slack teams
+* John D. Fox Award, FSU, 2025
+* Evelyn and John Baugh Scholarship, FSU, 2024
+* Dean’s Fellowship, FSU, 2019
