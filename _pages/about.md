@@ -24,4 +24,4 @@ When I’m not at the beamline, I am an avid long-distance runner. I recently ac
 
 ---
 
-[View my Research Portfolio](_pages/portfolio/) | [Check out my Publications](_pages/publications/) | [Download my CV](_pages/cv/)
+[View my Research Portfolio](/_pages/portfolio/) | [Check out my Publications](/_pages/publications/) | [Download my CV](/_pages/cv/)
