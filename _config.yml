@@ -7,7 +7,7 @@ name                     : &name "Vignesh Sitaraman"
 description              : &description "PhD Candidate in Experimental Nuclear Physics"
 url                      : "https://vs19g.github.io" 
 baseurl                  : "" 
-repository               : "vs19g/vs19g.github.io"
+repository               : "vs19g.github.io"
 
 # Site Author
 author:
