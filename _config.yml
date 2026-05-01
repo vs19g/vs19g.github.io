@@ -11,7 +11,7 @@ repository               : "vs19g.github.io"
 
 # Site Author
 author:
-  avatar           : "profile.png" # Make sure to upload a photo named profile.png to /images/
+  avatar           : "profile.jpg"
   name             : "Vignesh Sitaraman"
   pronouns         : 
   bio              : "PhD Candidate specializing in experimental nuclear physics, detector construction, and digital DAQ systems."
