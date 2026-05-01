@@ -17,7 +17,7 @@ My primary work involves studying $(\alpha, p)$ reactions critical to understand
 Before coming to FSU, I was a Junior Research Fellow at the **Tata Institute of Fundamental Research (TIFR)** in Mumbai, where I worked on digital signal processing for the **INGA array** and characterized $LaBr_3(Ce)$ detectors. I hold a dual degree from **BITS Pilani - Hyderabad** in Physics and Chemical Engineering, where my thesis focused on nanophotonics-enabled solar water desalination.
 
 ### Teaching & Mentorship
-I am passionate about physics education, having served as a Teaching Assistant for College Physics (PHY 2053/2054). I currently serve as the **Tandem Maintenance Coordinator** at the Fox Lab, where I am responsible for training incoming graduate students on laboratory safety, beamline operations, and accelerator maintenance.
+I am passionate about physics education, having served as a Teaching Assistant for College Physics (PHY 2053/2054). I have served as the **Tandem Maintenance Coordinator** at Fox Lab, where I was responsible for training incoming graduate students on laboratory safety, beamline operations, and accelerator maintenance.
 
 ### Beyond the Lab
 Outside of research, I am a dedicated long-distance runner currently training for my first full marathon later this year. I also indulge in amateur photography, where I am especially fond of landscapes and technical subjects with inherent symmetries.
