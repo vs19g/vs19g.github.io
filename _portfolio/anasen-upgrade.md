@@ -3,7 +3,7 @@ title: "Upgrading the ANASEN Proportional Counter"
 excerpt: "Design, fabrication, and calibration of a custom gas-filled internal tracking detector for nuclear astrophysics."
 collection: portfolio
 header:
-  teaser: "/anasen_chamber.jpg"
+  teaser: "/anasen.jpeg"
 ---
 {% include base_path %}
 
@@ -22,7 +22,7 @@ I spearheaded the mechanical and physical upgrade of the proportional counter ar
 * **Detector Assembly:** Precision stringing of delicate anode wires and assembling the cathode planes under strict clean-room conditions.
 
 <img src="/images/anasen.jpeg" alt="ANASEN Upgrade" width="500" style="display: block; margin: 0 auto;">
-<p align="center"><i>Figure 1: Photograph of the upgraded Proportional Counter.</i></p>
+<p align="center"><i>Figure 2: Photograph of the upgraded Proportional Counter.</i></p>
 
 * **Vacuum & Gas Systems:** Integrating the detector into the main scattering chamber, ensuring vacuum integrity, and regulating the flow of the proportional gas mixture.
 * **Calibration:** Characterizing the detector response using standard alpha-particle sources to map energy resolution and position linearity across the active area.
