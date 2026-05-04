@@ -26,12 +26,12 @@ Research Experience
 
 * **Junior Research Fellow** | Aug 2018 – July 2019
   * Tata Institute of Fundamental Research (TIFR), Mumbai
-  * Evaluated timing and energy response of $LaBr_3(Ce)$ detectors for the INGA array.
+  * Evaluated timing and energy response of $$LaBr_3(Ce)$$ detectors for the INGA array.
 
 Technical Skills
 ======
 * **Detector Instrumentation:** Custom detector design, Gas-filled Proportional Counters, Silicon strip detectors, HPGe detectors, High-vacuum systems.
-* **Programming:** C++, Python, ROOT, $\LaTeX$, MATLAB.
+* **Programming:** C++, Python, ROOT, $$\LaTeX$$, MATLAB.
 * **Simulation/Modeling:** Garfield++, Gmsh, Elmer, SRIM, LISE++, SolidWorks, COMSOL.
 
 Teaching
