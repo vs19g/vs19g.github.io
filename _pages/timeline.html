@@ -1,0 +1,71 @@
+---
+layout: archive
+title: "Timeline"
+permalink: /timeline/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>A combined, chronological view of publications and talks/presentations. See also the <a href="/talkmap.html">talk map</a>.</p>
+
+<style>
+.vs-timeline { position: relative; margin: 2em 0; padding-left: 1.5em; border-left: 3px solid #dcdcdc; }
+.vs-timeline__year { font-size: 1.3em; font-weight: 700; margin: 1.5em 0 0.5em -1.5em; padding-left: 1.5em; position: relative; }
+.vs-timeline__year:first-child { margin-top: 0; }
+.vs-timeline__item { position: relative; margin: 0.9em 0; padding-left: 0.2em; }
+.vs-timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -1.72em;
+  top: 0.35em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6c9bd1;
+  border: 2px solid #fff;
+}
+.vs-timeline__item--publication::before { background: #4a90a4; }
+.vs-timeline__item--talk::before { background: #d68910; }
+.vs-timeline__badge {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1em 0.5em;
+  border-radius: 3px;
+  margin-right: 0.5em;
+  color: #fff;
+  vertical-align: middle;
+}
+.vs-timeline__item--publication .vs-timeline__badge { background: #4a90a4; }
+.vs-timeline__item--talk .vs-timeline__badge { background: #d68910; }
+.vs-timeline__title { font-weight: 600; }
+.vs-timeline__meta { font-size: 0.9em; color: #767676; margin-top: 0.15em; }
+</style>
+
+<div class="vs-timeline">
+{% assign items = site.publications | concat: site.talks | sort: "date" | reverse %}
+{% assign current_year = "" %}
+{% for item in items %}
+  {% assign item_year = item.date | date: "%Y" %}
+  {% if item_year != current_year %}
+    <div class="vs-timeline__year">{{ item_year }}</div>
+    {% assign current_year = item_year %}
+  {% endif %}
+  {% if item.collection == "publications" %}
+    <div class="vs-timeline__item vs-timeline__item--publication">
+      <span class="vs-timeline__badge">Publication</span>
+      <a class="vs-timeline__title" href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+      <div class="vs-timeline__meta">{{ item.venue }} &middot; {{ item.date | date: "%B %Y" }}</div>
+    </div>
+  {% else %}
+    <div class="vs-timeline__item vs-timeline__item--talk">
+      <span class="vs-timeline__badge">{{ item.type | default: "Talk" }}</span>
+      <a class="vs-timeline__title" href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+      <div class="vs-timeline__meta">{{ item.venue }}{% if item.location %}, {{ item.location }}{% endif %} &middot; {{ item.date | date: "%B %Y" }}</div>
+    </div>
+  {% endif %}
+{% endfor %}
+</div>
