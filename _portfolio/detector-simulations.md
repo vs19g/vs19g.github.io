@@ -38,3 +38,6 @@ To understand the dynamic response of our proportional counters, I interface the
 Predicting how different ion species interact with our active gas target is critical for planning experiments.
 * I write custom C++ and Python scripts utilizing **pycatima** to calculate the stopping power and energy loss straggling of rare-isotope beams as they traverse the detector gas.
 * These kinematic simulations dictate the precise gas pressures and beam energies required to center the $(\alpha,p)$ reaction vertex within the acceptance of the ANASEN silicon array.
+
+### Ongoing: Particle Monte Carlo Simulation
+Building on the electric field and drift modeling above, I'm currently developing a particle Monte Carlo simulation of the ANASEN detector to model full event topologies and improve efficiency estimates for upcoming experimental campaigns.

@@ -9,8 +9,11 @@ header:
 
 **The Array for Nuclear Astrophysics and Structure with Exotic Nuclei (ANASEN)** is an active target detector system designed to measure charged-particle reaction kinematics. To improve our measurement capabilities for critical $$(\alpha,p)$$ reactions in X-ray bursts, the internal proportional counter required a substantial upgrade.
 
+<img src="/images/anasen-chamber-interior.jpg" alt="View into the ANASEN chamber showing the silicon detector array" width="600" style="display: block; margin: 0 auto;">
+<p align="center"><i>Figure 1: View into the ANASEN chamber showing the QQQ3/SX3 silicon array.</i></p>
+
 <img src="/images/anasen_chamber.jpg" alt="ANASEN" width="500" style="display: block; margin: 0 auto;">
-<p align="center"><i>Figure 1: Photograph of the detector partly assembled.</i></p>
+<p align="center"><i>Figure 2: Photograph of the detector partly assembled.</i></p>
 
 
 ### The Challenge
@@ -22,7 +25,7 @@ I spearheaded the mechanical and physical upgrade of the proportional counter ar
 * **Detector Assembly:** Precision stringing of delicate anode wires and assembling the cathode planes under strict clean-room conditions.
 
 <img src="/images/anasen.jpeg" alt="ANASEN Upgrade" width="500" style="display: block; margin: 0 auto;">
-<p align="center"><i>Figure 2: Photograph of the upgraded Proportional Counter.</i></p>
+<p align="center"><i>Figure 3: Photograph of the upgraded Proportional Counter.</i></p>
 
 * **Vacuum & Gas Systems:** Integrating the detector into the main scattering chamber, ensuring vacuum integrity, and regulating the flow of the proportional gas mixture.
 * **Calibration:** Characterizing the detector response using standard alpha-particle sources to map energy resolution and position linearity across the active area.
