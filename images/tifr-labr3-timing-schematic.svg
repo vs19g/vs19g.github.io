@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="900" height="260" fill="#ffffff"/>
+
+  <g font-size="15" text-anchor="middle">
+    <rect x="20" y="90" width="190" height="80" rx="8" fill="#fdece9" stroke="#c0392b" stroke-width="2"/>
+    <text x="115" y="122" fill="#2b2b2b" font-weight="600">Gamma Source</text>
+    <text x="115" y="142" fill="#555" font-size="12">e.g. Co-60</text>
+
+    <rect x="250" y="90" width="190" height="80" rx="8" fill="#eaf2fb" stroke="#2e75b6" stroke-width="2"/>
+    <text x="345" y="115" fill="#2b2b2b" font-weight="600">LaBr3(Ce)</text>
+    <text x="345" y="135" fill="#555" font-size="12">scintillator</text>
+    <text x="345" y="153" fill="#555" font-size="12">+ PMT</text>
+
+    <rect x="480" y="90" width="190" height="80" rx="8" fill="#eafbf0" stroke="#2e9e5b" stroke-width="2"/>
+    <text x="575" y="115" fill="#2b2b2b" font-weight="600">CFD / Digitizer</text>
+    <text x="575" y="135" fill="#555" font-size="12">timing + energy</text>
+    <text x="575" y="153" fill="#555" font-size="12">extraction</text>
+
+    <rect x="710" y="90" width="170" height="80" rx="8" fill="#fdf3e3" stroke="#c78a1e" stroke-width="2"/>
+    <text x="795" y="122" fill="#2b2b2b" font-weight="600">Analysis</text>
+    <text x="795" y="142" fill="#555" font-size="12">timing &amp;</text>
+    <text x="795" y="157" fill="#555" font-size="12">energy response</text>
+  </g>
+
+  <line x1="210" y1="130" x2="245" y2="130" stroke="#555" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="440" y1="130" x2="475" y2="130" stroke="#555" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="670" y1="130" x2="705" y2="130" stroke="#555" stroke-width="2" marker-end="url(#arrow3)"/>
+
+  <text x="450" y="230" text-anchor="middle" font-size="13" fill="#333">LaBr3(Ce) fast-timing characterization for the INGA array</text>
+</svg>
