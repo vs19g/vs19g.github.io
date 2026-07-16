@@ -3,7 +3,7 @@ title: "Digital Data Acquisition Systems at the John D. Fox Laboratory"
 excerpt: "Upgrading the ANASEN active target's DAQ with CAEN digitizers and FSUDAQ, and supporting digital electronics for the SABRE array with CoMPASS."
 collection: portfolio
 header:
-  teaser: "/daq-rack-anasen.jpg"
+  teaser: "/daq-rack-anasen.jpeg"
 ---
 {% include base_path %}
 
