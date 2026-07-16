@@ -9,7 +9,7 @@ header:
 
 Every detector upgrade is only as good as the electronics chain reading it out. Alongside the mechanical rebuild of the ANASEN proportional counter, I led the transition of its data acquisition system from legacy analog electronics to a digital, trigger-flexible pipeline, and separately supported digital DAQ setup for the SABRE array.
 
-<img src="/images/daq-rack-anasen.jpg" alt="ANASEN DAQ electronics rack" width="600" style="display: block; margin: 0 auto;">
+<img src="/images/daq-rack-anasen.jpeg" alt="ANASEN DAQ electronics rack" width="600" style="display: block; margin: 0 auto;">
 <p align="center"><i>The CAEN V1740D digitizer crate and MTDC-32 timing rack.</i></p>
 
 <img src="/images/anasen-daq-block-diagram.png" alt="ANASEN trigger and signal chain block diagram" width="700" style="display: block; margin: 0 auto;">
