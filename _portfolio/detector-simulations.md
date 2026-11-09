@@ -2,6 +2,7 @@
 title: "Computational Detector Physics & Simulations"
 excerpt: "Modeling electric and weighting fields and energy loss with Gmsh, Elmer FEM, ParaView, and pycatima, simulating the next measurement, and drift and avalanche simulation with Garfield++."
 collection: portfolio
+order: 3
 header:
   teaser: "/Fieldoutput.png"
 ---
@@ -29,7 +30,26 @@ To generate precise electrostatic maps of our custom gas-filled detectors, I bui
   </tr>
 </table>
 
-These field maps also feed the weighting-field calculation that predicts the cathode signal of the twisted-wire counter, which I tested against source data; see [TWINE: Twisted-Wire Tracking and the Shockley–Ramo Signal](/portfolio/twine-shockley-ramo/).
+### TWINE Field and Weighting-Field Simulations
+I used the same pipeline to model TWINE, the twisted-wire proportional counter I built for ANASEN. Its anodes and cathodes twist in opposite directions, so the field changes along the beam axis and can't be taken from an analytic formula. Every wire is inclined to the axis by only about 6°, so I modeled the counter as a stack of two-dimensional slices. At each slice I solved two problems on the same mesh: the operating field at the 660 V anode bias, and the weighting field of one cathode, with that cathode at 1 V and every other electrode grounded. By the Shockley–Ramo theorem, the dot product of the two fields gives the current that a drifting avalanche ion induces on that cathode at each point.
+* **Seven slices, one curve.** I solved slices running from a crossover to the middle of a cell. The product at the anode surface falls on a single Lorentzian in the arc length between the anode and the cathode, with a half-width of 5.10 mm, which describes the solved values to 0.5%. One curve therefore serves every cell.
+* **A prediction tested against data.** The calculation predicts a cathode-to-anode signal ratio of 0.906 at a crossover and 0.539 at mid-cell. In 9850 crossover events from α-source runs, the measured cathode charge fraction oscillates along the beam axis with the predicted period and phase, and one scale factor is the only free parameter. The measured modulation is shallower than predicted, and most of the difference comes from the resolution of the projected reference position.
+
+<table style="width:100%; border: none;">
+  <tr style="border: none;">
+    <td style="width:50%; border: none; text-align: center;">
+      <img src="/images/twine-dotproduct-midcell.png" alt="Color map on a gray background around one cathode at the top of the frame. A purple region, for negative values, joins that cathode to the two anodes just below it in an inverted V; green spots surround the neighboring cathodes and the inner guard wires." style="width:100%;">
+      <br><i>(a) Cell midpoint, z = 0 mm: the driven cathode (top) faces two anodes at &plusmn;7.5&deg;.</i>
+    </td>
+    <td style="width:50%; border: none; text-align: center;">
+      <img src="/images/twine-dotproduct-crossover.png" alt="Color map on a gray background around one cathode at the top of the frame. A purple oval joins that cathode to the single anode directly below it, smaller purple lobes surround the next anode on each side, and green spots surround the neighboring cathodes and the inner guard wires." style="width:100%;">
+      <br><i>(b) Crossover, z = 19.72 mm: the driven cathode faces one anode at its own azimuth.</i>
+    </td>
+  </tr>
+</table>
+<p align="center"><i>Dot product of one cathode's weighting field with the operating field, E<sub>w</sub>&middot;E<sub>0</sub>, on a signed logarithmic color scale. It is the current induced on that cathode by a positive ion at each point, divided by q&mu;.</i></p>
+
+The equipotential maps, the derivation, and the full comparison with data are on the [TWINE page](/portfolio/twine-shockley-ramo/).
 
 ### Electron Drift & Avalanche (Garfield++, in development)
 The static Elmer solutions give the operating field and the weighting field of each wire, and the weighting fields are now validated against the measured cathode charge fraction. They don't give the ion trajectories, so they predict the current induced where the ions start rather than the full pulse amplitude. The next phase, now in development, builds on those validated weighting fields by coupling them to **Garfield++** (via **ROOT** in C++).

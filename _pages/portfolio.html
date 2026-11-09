@@ -8,7 +8,9 @@ author_profile: true
 {% include base_path %}
 
 
-{% for post in site.portfolio %}
+{% comment %} Cards follow the "order" key in each entry's front matter: related projects grouped, newest first. {% endcomment %}
+{% assign portfolio_items = site.portfolio | sort: "order", "last" %}
+{% for post in portfolio_items %}
  {% include archive-single.html type="grid" %}
 {% endfor %}
 

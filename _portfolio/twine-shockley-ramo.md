@@ -2,6 +2,7 @@
 title: "TWINE: Twisted-Wire Tracking and the Shockley–Ramo Signal"
 excerpt: "How the twisted-wire proportional counter I built for ANASEN locates a track along the beam, and how a Shockley–Ramo weighting-field calculation predicts its cathode signal."
 collection: portfolio
+order: 2
 header:
   teaser: "/twine-crossovers-3d.png"
 ---

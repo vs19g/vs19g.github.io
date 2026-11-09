@@ -2,6 +2,7 @@
 title: "Upgrading the ANASEN Proportional Counter"
 excerpt: "Design, fabrication, calibration, and first in-beam campaigns of TWINE, the new gas-filled internal tracking detector of the ANASEN active target."
 collection: portfolio
+order: 1
 header:
   teaser: "/anasen.jpeg"
 ---

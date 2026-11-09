@@ -2,6 +2,7 @@
 title: "Digital Signal Processing and Fast-Timing Detector Characterization at TIFR"
 excerpt: "DSP algorithm development for the Indian National Gamma Array, and fast-timing characterization of LaBr3(Ce) detectors as a Junior Research Fellow."
 collection: portfolio
+order: 5
 header:
   teaser: "/tifr-labr3-timing-schematic.svg"
 ---

@@ -2,6 +2,7 @@
 title: "Nano-Photonics Enabled Solar Membrane Distillation"
 excerpt: "Undergraduate project simulating a bilayer-membrane solar desalination plant and evaluating its viability for Hyderabad, India."
 collection: portfolio
+order: 6
 header:
   teaser: "/nesmd-schematic.svg"
 ---
