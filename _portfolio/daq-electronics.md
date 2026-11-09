@@ -27,6 +27,17 @@ This digital chain was in place for the experimental campaigns measuring the $$^
 <img src="/images/daq-scope-timing.jpg" alt="Oscilloscope capture of the ANASEN proportional counter's anode and cathode signals" width="600" style="display: block; margin: 0 auto;">
 <p align="center"><i>Oscilloscope capture of the proportional counter's anode and cathode signals.</i></p>
 
+### Why FSUDAQ
+The readout depends on one trigger arrangement: the silicon trigger formed in the 1740s opens the validation window for the proportional-counter channels on the 1725s. CoMPASS could not easily provide this, because it could not manage the TRIG-OUT propagation and the clock-synchronization chain for the 1740s at the same time, and its trigger logic can be changed only to a limited extent. FSUDAQ, the open-source acquisition program written in-house at the Fox Lab by T. L. Tang, exposes those register-level controls, and moving to it made it possible to add trigger validation for the 1725s and synchronize the clock across the whole array.
+
+FSUDAQ ran both digitizer families together in beam for the first time in this setup, and every reaction run of both ANASEN campaigns was recorded with it. It handles up to 5&times;10<sup>5</sup> triggers per second per channel without waveform recording, so dead time is expected to be negligible at the rates of the stable-beam run.
+
+<img src="/images/anasen-compass.jpg" alt="Screenshot of the CoMPASS window: a time-difference histogram in nanoseconds with a red Gaussian fit centered near 0.5 nanoseconds, beside two energy histograms peaked near 510 keV and panels listing counting statistics." width="550" style="display: block; margin: 0 auto;">
+<p align="center"><i>The CAEN CoMPASS interface: acquisition control and per-channel spectra (image: CAEN S.p.A., CoMPASS user manual).</i></p>
+
+<img src="/images/anasen-fsudaq-board-control.png" alt="Screenshot of the FSUDAQ digitizer settings window: board information, status lights, a channel mask and trigger options on the left, and input, trigger, pulse-shape and other channel settings in fields and drop-down menus on the right." width="650" style="display: block; margin: 0 auto;">
+<p align="center"><i>The FSUDAQ board-control window, which exposes the register-level settings the TWINE readout needs (T. L. Tang, Nucl. Instrum. Methods A 1071, 170072).</i></p>
+
 ### SABRE / SE-SPS: CoMPASS
 To broaden my experimental electronics expertise beyond ANASEN, I assisted in setting up the digital electronics and trigger logic for operating the **SABRE** array in conjunction with the **SE-SPS** (Super-Enge Split-Pole Spectrograph), using **CoMPASS** for digital pulse processing.
 

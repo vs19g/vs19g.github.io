@@ -1,0 +1,193 @@
+% Curriculum vitae of Vignesh Sitaraman: public version for vs19g.github.io.
+% Built from the CMU application CV (2026-10-30) and updated after the defense.
+% Compile: latexmk -pdf cv-vignesh-sitaraman.tex
+% Output goes to files/cv-vignesh-sitaraman.pdf on the site.
+% Jekyll ignores this _cv/ folder, so the source is not published.
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage[margin=0.7in,top=0.55in,bottom=0.75in,footskip=0.35in]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\definecolor{accent}{RGB}{31,56,100}
+\definecolor{muted}{RGB}{110,110,110}
+
+\hypersetup{
+  colorlinks=true, urlcolor=accent, linkcolor=accent,
+  pdftitle={Vignesh Sitaraman: Curriculum Vitae},
+  pdfauthor={Vignesh Sitaraman},
+  pdfsubject={Curriculum vitae},
+  pdfkeywords={nuclear astrophysics, active-target detectors, ANASEN, TWINE, data acquisition},
+  pdflang={en-US}
+}
+
+% Page style: a quiet footer with the page count.
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\color{muted}Vignesh Sitaraman \textperiodcentered{} Curriculum Vitae \textperiodcentered{} Page \thepage{} of \pageref*{LastPage}}
+
+% Section headings: small caps in the accent color over a rule.
+\titleformat{\section}{\color{accent}\large\scshape\bfseries}{}{0em}{}[{\vspace{-0.8ex}\color{accent}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{1.3ex plus 0.3ex minus 0.2ex}{0.7ex}
+
+\setlist[itemize]{leftmargin=1.1em, label=\textbullet, itemsep=1pt, topsep=1.5pt, parsep=0pt, partopsep=0pt}
+\setlength{\parindent}{0pt}
+
+% Entry: title and dates on one line, organization and place on the next.
+\newcommand{\entry}[4]{%
+  \par\addvspace{4pt}\noindent\textbf{#1}\hfill #2\par\nopagebreak
+  \noindent #3\hfill\textit{#4}\par\nopagebreak}
+\newcommand{\entrynote}[1]{\noindent\textit{#1}\par\nopagebreak}
+\newcommand{\subhead}[1]{\par\addvspace{3pt}\noindent\textbf{#1}\par\nopagebreak}
+
+\newcommand{\iso}[2]{\textsuperscript{#1}#2}
+\newcommand{\ap}{(\ensuremath{\alpha},p)}
+\newcommand{\me}{\textbf{V.~Sitaraman}}
+\newcommand{\sep}{\enspace|\enspace}
+
+\begin{document}
+
+% ---------------------------------------------------------------- header
+\begin{center}
+  {\color{accent}\fontsize{22}{26}\selectfont\bfseries Vignesh Sitaraman}\\[4pt]
+  {\color{accent}Experimental Nuclear Physicist\sep Nuclear Astrophysics, Active-Target Detectors, and Digital Data Acquisition}\\[3pt]
+  Tallahassee, FL\sep \href{mailto:vsitaraman@fsu.edu}{vsitaraman@fsu.edu}\sep \href{https://vs19g.github.io}{vs19g.github.io}\\[1pt]
+  ORCID: \href{https://orcid.org/0000-0002-5561-5286}{0000-0002-5561-5286}\sep
+  \href{https://scholar.google.com/citations?user=BjY0FunPZVgC}{Google Scholar}\sep
+  \href{https://github.com/vs19g}{github.com/vs19g}\sep
+  \href{https://www.linkedin.com/in/vignesh-sitaraman-1b5a62136}{LinkedIn}
+\end{center}
+
+% ---------------------------------------------------------------- summary
+\section{Summary}
+Experimental nuclear physicist with a Ph.D. in Physics from Florida State University (defended November 2026) and six years of experience building, calibrating, and running charged-particle and gamma-ray detector systems at accelerator facilities. Designed and built TWINE, a twisted-wire tracking proportional counter, rebuilt the ANASEN active-target detector around it and a new digital data-acquisition system, and took the detector through two in-beam campaigns on \ap{} reactions for nucleosynthesis in X-ray bursts and core-collapse supernovae, one with a stable beam at up to $2.3\times10^{7}$ particles/s and one with a radioactive beam. Develops the field simulations, Monte Carlo, and C++, Python, and ROOT analysis needed to interpret the data.
+
+% ---------------------------------------------------------------- education
+\section{Education}
+\entry{Ph.D. in Physics (Nuclear Astrophysics)}{2026}{Florida State University}{Tallahassee, FL}
+Dissertation: \textit{The study of \ap{} reactions using the upgraded ANASEN detector}. Advisor: Prof.\ Ingo Wiedenhöver.\\
+Defended November 3, 2026; degree conferred December 2026.
+
+\entry{M.S. in Physics}{2020}{Florida State University}{Tallahassee, FL}
+
+\entry{M.Sc. in Physics and B.E. in Chemical Engineering (integrated dual degree)}{2018}{BITS Pilani, Hyderabad Campus}{Hyderabad, India}
+M.Sc.\ thesis: \textit{Digital Signal Processing for the Charged Particle Detector Array at INGA}.
+B.E.\ thesis: \textit{Desalination of Water using Nano-Photonics}.
+
+% ---------------------------------------------------------------- research
+\section{Research Experience}
+\entry{Graduate Research Assistant}{May 2020 -- Dec 2026}{John D. Fox Superconducting Linear Accelerator Laboratory, Florida State University}{Tallahassee, FL}
+\entrynote{Detector development, data acquisition, and \ap{} measurements for nuclear astrophysics. Advisor: Prof.\ Ingo Wiedenhöver.}
+\begin{itemize}
+  \item \textbf{Detector design.} Designed and built TWINE, a new tracking proportional counter for the ANASEN active-target detector (Array for Nuclear Astrophysics and Structure with Exotic Nuclei). Its counter-twisted anode and cathode wires cross at eight points, so each track is located within a 39--46\,mm cell instead of along a 348.6\,mm resistive wire. Measured an in-gas \ensuremath{\alpha}-particle position resolution of 6.0\,mm FWHM against an \iso{241}{Am} source at known positions, about three times better than the original counter.
+  \item \textbf{Fabrication.} Strung the anode wires and assembled the cathode planes under clean-room conditions, and integrated the counter into the scattering chamber with its vacuum and gas-flow systems.
+  \item \textbf{Field simulation.} Modeled the operating and weighting fields of the twisted-wire geometry with a finite-element pipeline (Gmsh, Elmer FEM, ParaView) and used the Shockley--Ramo theorem to predict the cathode charge sharing the position reconstruction relies on. On 9850 source events the measured charge fraction follows the predicted period and phase along each cell, with one scale factor as the only free parameter.
+  \item \textbf{Stable-beam campaign.} Ran \iso{27}{Al}\ap\iso{30}{Si} with a stable beam at up to $2.3\times10^{7}$ particles/s, two orders of magnitude above the maximum of the RESOLUT radioactive-beam separator. Analyzed the dataset (45 runs, 38\,h, ${\sim}2\times10^{12}$ beam ions): calibrated the silicon arrays and proportional counter, reconstructed a vertex for every event topology, and identified more than a million protons in the downstream silicon barrel by kinematics and calibrated energy loss. Showed that the yield exceeds Hauser--Feshbach predictions and lacks the expected drop-off at the lowest energies, narrowed the cause to beam stopping powers or non-reaction background, and identified the beam-energy and threshold changes needed for the follow-up measurement.
+  \item \textbf{Radioactive-beam campaign.} Ran \iso{17}{F}\ap\iso{20}{Ne} with a beam from the RESOLUT in-flight separator (up to ${\sim}10^{5}$ particles/s). Identified the beam components event by event by time of flight, correlating the accelerator RF--MCP and MCP--silicon time differences to separate species from consecutive RF bunches, and located the \iso{17}{F} stopping point in the gas with the Needle Ion Chamber.
+  \item \textbf{Other experiments.} Fielded the upgraded detector in a third campaign, \iso{24}{Mg}\ap, covering setup, commissioning, calibration, and data collection with the QQQ3 and SX3 silicon strip detectors.
+  \item \textbf{Data acquisition.} Moved the ANASEN readout from ASIC-based electronics to CAEN V1740 (QDC) and V1725 (PHA) digitizers, and migrated acquisition from CoMPASS to FSUDAQ so that the silicon trigger validates the proportional-counter channels with clock synchronization across boards. Every reaction run of both campaigns was recorded with this system. Used CAEN V1730 digitizers with PSD firmware for accelerator RF and microchannel-plate (MCP) timing in radioactive-beam experiments.
+  \item \textbf{Simulation and analysis.} Developed, with R.~Tang and J.~Szalkie, a Monte Carlo simulation of the reaction in the chamber, used to map detection efficiency and to set the beam energy (80\,MeV) and counter threshold (2\,keV) for the next measurement. Wrote C++ and Python energy-loss and kinematics calculations (LISE++, pycatima), compared stopping-power models for heavy ions in helium, and wrote C++/ROOT code for large-dataset reduction and calibration.
+  \item \textbf{SABRE.} Assisted in setting up the digital electronics and trigger logic for the SABRE silicon array operating with the Super-Enge Split-Pole Spectrograph (SE-SPS), using CAEN CoMPASS.
+  \item \textbf{Accelerators and off-site work.} Operated the Tandem Van de Graaff and superconducting LINAC accelerators. At TRIUMF-ISAC (Vancouver, Canada), tested and helped set up the silicon detectors and optimize the QDC parameters for the ANASEN measurement of \iso{18}{F}\ap\iso{21}{Ne} with a radioactive \iso{18}{F} beam (arXiv:2609.06286). Took experimental shifts at the Facility for Rare Isotope Beams (FRIB) during a GRETINA campaign.
+\end{itemize}
+
+\entry{Junior Research Fellow}{Aug 2018 -- Jul 2019}{Tata Institute of Fundamental Research (TIFR)}{Mumbai, India}
+\entrynote{Gamma-ray detector characterization and nuclear structure. Advisors: Prof.\ Rudrajyoti Palit and Prof.\ S.\,N.\ Mishra.}
+\begin{itemize}
+  \item Evaluated the timing and energy response of LaBr\textsubscript{3}(Ce) scintillator detectors to add fast-timing capability to the Indian National Gamma Array (INGA) for precision nuclear lifetime measurements.
+  \item Worked on digital signal processing for the INGA array, and investigated the structure of neutron-deficient nuclei in the mass-130 region.
+\end{itemize}
+
+\entry{Research Project, Physics (M.Sc.\ thesis)}{Aug 2017 -- Dec 2017}{Tata Institute of Fundamental Research (TIFR)}{Mumbai, India}
+\entrynote{Advisors: Prof.\ Rudrajyoti Palit and Dr.\ Sarmistha Banik.}
+\begin{itemize}
+  \item Implemented and compared digital signal processing algorithms to analyze high-volume data from INGA and its Charged Particle Detector Array (CPDA), and took part in experimental campaigns at the BARC-TIFR Pelletron LINAC facility.
+\end{itemize}
+
+\entry{Research Project, Chemical Engineering (B.E.\ thesis)}{Jan 2018 -- May 2018}{BITS Pilani, Hyderabad Campus}{Hyderabad, India}
+\entrynote{Advisors: Prof.\ Kannan Ramaswamy and Dr.\ Vikranth K.\ Surasani.}
+\begin{itemize}
+  \item Simulated a nanophotonics-enabled solar membrane distillation plant with a bilayer membrane and evaluated its viability for Hyderabad to guide construction of a prototype.
+\end{itemize}
+
+% ---------------------------------------------------------------- publications
+\section{Publications}
+Full list: \href{https://vs19g.github.io/publications/}{vs19g.github.io/publications} and \href{https://scholar.google.com/citations?user=BjY0FunPZVgC}{Google Scholar}.
+
+\subhead{Dissertation}
+\begin{itemize}
+  \item \me, ``The study of \ap{} reactions using the upgraded ANASEN detector,'' Ph.D.\ dissertation, Florida State University (2026). Full text under a one-year embargo.
+\end{itemize}
+
+\subhead{Peer-reviewed journal articles}
+\begin{itemize}
+  \item A.\,L.\ Conley, M.\ Spieker, \ldots, \me, and T.\ Stuck, ``Excited states of \iso{148}{Nd} studied via the \iso{150}{Nd}(p,t)\iso{148}{Nd} reaction and the observation of possible low-spin two-phonon octupole states at $N = 88$,'' \href{https://doi.org/10.1103/c1xc-2hdz}{Physical Review C \textbf{114}, 024344 (2026)}; arXiv:2608.12101.
+  \item A.\,L.\ Conley, M.\ Spieker, \ldots, \me, et al., ``The ICESPICE demonstrator for particle/\ensuremath{\gamma}-e\textsuperscript{$-$} coincidence experiments at Florida State University,'' \href{https://www.sciencedirect.com/science/article/abs/pii/S0168900226001154}{Nuclear Instruments and Methods in Physics Research Section A, 171389 (2026)}; arXiv:2605.11000.
+  \item G.\,W.\ McCann, I.\ Wiedenhöver, \ldots, \me, et al., ``Measurement of near-threshold resonances in \iso{9}{B} for Big Bang nucleosynthesis,'' \href{https://doi.org/10.1103/37y9-m3yb}{Physical Review C \textbf{113}, 015805 (2026)}.
+  \item M.\ Spieker, L.\,A.\ Riley, \ldots, \me, et al., ``Experimental study of \iso{53}{Cr} via the (d,p\ensuremath{\gamma}) reaction,'' \href{https://doi.org/10.1103/wp85-rthk}{Physical Review C \textbf{112}, 064331 (2025)}.
+  \item E.\ Lopez-Saavedra, S.\ Almaraz-Calderon, \ldots, \me, et al., ``Study of \ensuremath{\alpha}-resonances in \iso{11}{B} via the \iso{7}{Li}(\iso{7}{Li},t) reaction,'' \href{https://doi.org/10.1103/wsf3-2sh6}{Physical Review C \textbf{112}, 024324 (2025)}.
+  \item A.\,N.\ Kuchera, C.\,R.\ Hoffman, \ldots, \me, et al., ``Single-neutron adding on \iso{34}{S},'' \href{https://doi.org/10.1140/epja/s10050-024-01399-z}{The European Physical Journal A \textbf{60}, 176 (2024)}.
+  \item A.\,L.\ Conley, B.\ Kelly, M.\ Spieker, \ldots, \me, et al., ``The CeBrA demonstrator for particle-\ensuremath{\gamma} coincidence experiments at the FSU Super-Enge Split-Pole Spectrograph,'' \href{https://doi.org/10.1016/j.nima.2023.168827}{Nuclear Instruments and Methods in Physics Research Section A \textbf{1058}, 168827 (2024)}.
+  \item T.\,J.\ Gray, J.\,M.\ Allmond, \ldots, \me, et al., ``Suppressed electric quadrupole collectivity in \iso{49}{Ti},'' \href{https://doi.org/10.1016/j.physletb.2024.138856}{Physics Letters B \textbf{855}, 138856 (2024)}.
+\end{itemize}
+
+\subhead{Preprints and in preparation}
+\begin{itemize}
+  \item K.\,S.\ Davis, J.\,C.\ Blackmon, C.\,M.\ Deibel, \ldots, \me, \ldots, I.\ Wiedenhöver, ``Direct measurement of \iso{18}{F}\ap\iso{21}{Ne} cross sections with ANASEN,'' \href{https://arxiv.org/abs/2609.06286}{arXiv:2609.06286} (2026).
+  \item K.\,H.\ Pham, D.\ Mumma, C.\,M.\ Deibel, \ldots, \me, et al., ``Properties of states in \iso{19}{Ne} important for the \iso{18}{F}(p,\ensuremath{\alpha})\iso{15}{O} reaction rate,'' \href{https://arxiv.org/abs/2604.13280}{arXiv:2604.13280} (2026).
+  \item \me, I.\ Wiedenhöver, S.\ Balakrishnan, R.\ Mahajan, et al., ``The Upgraded ANASEN Proportional Counter,'' in preparation.
+  \item \me, I.\ Wiedenhöver, S.\ Balakrishnan, R.\ Mahajan, et al., ``The study of the \iso{17}{F}\ap{} reaction,'' in preparation.
+\end{itemize}
+
+% ---------------------------------------------------------------- presentations
+\section{Presentations}
+\begin{itemize}
+  \item ``The study of \ap{} reactions using the upgraded ANASEN detector,'' Ph.D.\ defense, Department of Physics, Florida State University, Tallahassee, FL, November 2026.
+  \item ``The study of the \iso{17}{F}\ap{} reaction using the upgraded ANASEN detector,'' talk, APS Division of Nuclear Physics (DNP) Fall Meeting, Chicago, IL, October 2025.
+  \item ``The study of the \iso{27}{Al}\ap{} reaction using the upgraded ANASEN detector,'' talk, APS DNP Fall Meeting, Boston, MA, October 2024.
+  \item ``Upgrades to the ANASEN Active Target Detector for \ap{} reactions with radioactive beams,'' poster, Gordon Research Conference on Nuclear Chemistry, New London, NH, June 2023.
+  \item ``The study of the \iso{17}{F}\ap\iso{20}{Ne} reaction rate using the ANASEN active target detector,'' talk, APS DNP Fall Meeting, Boston, MA, October 2021.
+  \item ``Desalination of Water using Nanophotonics,'' poster, National Symposium on Emerging Environmental Challenges: An Engineering Approach, Hyderabad, India, March 2018.
+\end{itemize}
+
+% ---------------------------------------------------------------- skills
+\section{Technical Skills}
+\begin{itemize}
+  \item \textbf{Data acquisition and analysis:} multi-parameter digital data acquisition; CAEN V1725, V1730, and V1740 digitizers; PHA, QDC, and PSD firmware; FSUDAQ, CAEN CoMPASS; trigger logic, trigger validation, and clock synchronization; accelerator RF and MCP timing; event-by-event analysis of large datasets; digital signal processing.
+  \item \textbf{Radiation detectors:} silicon strip detectors, gas-filled proportional counters, ionization chambers, microchannel plates, HPGe detectors, LaBr\textsubscript{3}(Ce) scintillators; energy, timing, and position calibration; fast timing; coincidence measurements; detector design and fabrication.
+  \item \textbf{Experiments at nuclear physics laboratories:} preparation, setup, commissioning, and running of accelerator-based experiments; radioactive-beam experiments and time-of-flight beam identification; low-count-rate measurements, background studies, systematic uncertainty analysis; on-site work at TRIUMF-ISAC and FRIB.
+  \item \textbf{Beam and detector simulation:} energy-loss and reaction-kinematics calculations (LISE++, pycatima, SRIM); Monte Carlo simulation; finite-element electric- and weighting-field modeling (Gmsh, Elmer FEM, ParaView); COMSOL Multiphysics (undergraduate project); SolidWorks.
+  \item \textbf{Accelerators and vacuum:} operation of Tandem Van de Graaff and superconducting LINAC accelerators; high-vacuum and ultra-high-vacuum systems; detector gas handling.
+  \item \textbf{Programming:} C++, Python, ROOT, MATLAB/Octave, \LaTeX.
+  \item \textbf{Languages:} English, Hindi, Tamil, Spanish (B1).
+\end{itemize}
+
+% ---------------------------------------------------------------- service
+\section{Leadership, Teaching, and Mentoring}
+\begin{itemize}
+  \item \textbf{Tandem Maintenance Coordinator}, John D. Fox Laboratory: trained incoming graduate students in laboratory safety and maintenance checks and organized the accelerator maintenance schedule.
+  \item Mentored undergraduates and junior graduate students in vacuum systems, digital electronics, detector assembly and testing, and data analysis and simulation with C++ and ROOT.
+  \item \textbf{Teaching Assistant}, Florida State University: PHY 2053 College Physics A (Fall 2019, Spring 2020) and PHY 2054 College Physics B (Summer and Fall 2020). Ran undergraduate laboratory sessions, gave pre-lab lectures, graded technical reports, and held weekly office hours.
+\end{itemize}
+
+% ---------------------------------------------------------------- awards
+\section{Awards, Affiliations, and Training}
+\begin{itemize}
+  \item John D. Fox Award, Department of Physics, Florida State University, 2025
+  \item Evelyn and John Baugh Scholarship, Department of Physics, Florida State University, 2024
+  \item AAAS Scholarship and membership, American Association for the Advancement of Science, 2020--2021
+  \item Dean's Fellowship, Florida State University, 2019
+  \item Junior Research Fellowship, Tata Institute of Fundamental Research, 2018
+  \item Member, American Physical Society (APS)
+  \item PlasmaSurf Summer School for Nuclear Fusion and Plasma Physics, Instituto de Plasmas e Fusão Nuclear (IPFN), Lisbon, Portugal, July 2018
+\end{itemize}
+
+\end{document}

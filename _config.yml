@@ -4,7 +4,7 @@ site_theme               : "default"
 title                    : "Vignesh Sitaraman"
 title_separator          : "-"
 name                     : &name "Vignesh Sitaraman"
-description              : &description "PhD Candidate in Experimental Nuclear Physics"
+description              : &description "Ph.D. in Experimental Nuclear Physics"
 url                      : "https://vs19g.github.io" 
 baseurl                  : "" 
 repository               : "vs19g.github.io"
@@ -14,7 +14,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Vignesh Sitaraman"
   pronouns         : 
-  bio              : "PhD Candidate specializing in experimental nuclear physics, detector construction, and digital DAQ systems."
+  bio              : "Ph.D. physicist (FSU, 2026) specializing in experimental nuclear astrophysics, active-target detectors, and digital DAQ systems."
   location         : "Tallahassee, FL"
   employer         : "Florida State University"
   uri              : 

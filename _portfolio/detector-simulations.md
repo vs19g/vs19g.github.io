@@ -1,6 +1,6 @@
 ---
 title: "Computational Detector Physics & Simulations"
-excerpt: "Modeling electric fields, electron drift, and energy loss using Gmsh, Elmer FEM, ParaView, Garfield++, and pycatima."
+excerpt: "Modeling electric and weighting fields and energy loss with Gmsh, Elmer FEM, ParaView, and pycatima, simulating the next measurement, and drift and avalanche simulation with Garfield++."
 collection: portfolio
 header:
   teaser: "/Fieldoutput.png"
@@ -29,15 +29,33 @@ To generate precise electrostatic maps of our custom gas-filled detectors, I bui
   </tr>
 </table>
 
-### Electron Drift & Avalanche (Garfield++)
-To understand the dynamic response of our proportional counters, I interface the Elmer electric field maps with **Garfield++** (integrated via **ROOT** in C++). 
-* I simulate the primary ionization tracks of incident heavy ions.
-* By modeling the electron drift velocities, diffusion, and Townsend avalanche processes within the imported electric field, I can predict the theoretical gain and signal timing of the physical detector before it is built.
+These field maps also feed the weighting-field calculation that predicts the cathode signal of the twisted-wire counter, which I tested against source data; see [TWINE: Twisted-Wire Tracking and the Shockley–Ramo Signal](/portfolio/twine-shockley-ramo/).
+
+### Electron Drift & Avalanche (Garfield++, in development)
+The static Elmer solutions give the operating field and the weighting field of each wire, and the weighting fields are now validated against the measured cathode charge fraction. They don't give the ion trajectories, so they predict the current induced where the ions start rather than the full pulse amplitude. The next phase, now in development, builds on those validated weighting fields by coupling them to **Garfield++** (via **ROOT** in C++).
+* Simulate the primary ionization of the tracks and the electron drift, diffusion, and Townsend avalanche in the He–CO<sub>2</sub> fill.
+* Integrate the induced current along the simulated ion trajectories to predict the gain, the signal timing, and the cathode amplitude for a given gas, bias, and shaping, so the operating point of the next campaign can be chosen by calculation and then confirmed with a source.
 
 ### Energy Loss & Kinematics (pycatima / C++)
 Predicting how different ion species interact with our active gas target is critical for planning experiments.
 * I write custom C++ and Python scripts utilizing **pycatima** to calculate the stopping power and energy loss straggling of rare-isotope beams as they traverse the detector gas.
 * These kinematic simulations dictate the precise gas pressures and beam energies required to center the $(\alpha,p)$ reaction vertex within the acceptance of the ANASEN silicon array.
 
-### Ongoing: Particle Monte Carlo Simulation
-Building on the electric field and drift modeling above, I'm currently developing a particle Monte Carlo simulation of the ANASEN detector to model full event topologies and improve efficiency estimates for upcoming experimental campaigns.
+### Detector Simulation and the Next Measurement
+Ryan Tang, James Szalkie, and I developed a Monte Carlo simulation of the reaction in the chamber. It generates $$^{27}\mathrm{Al}(\alpha,p)^{30}\mathrm{Si}$$ events in nine final states of $$^{30}\mathrm{Si}$$ along the beam path, slows the beam through the range–energy tables, and keeps an event when the proton reaches the silicon barrel and deposits at least the threshold energy in the proportional counter. In my dissertation I used it in two ways.
+* **Interpreting Run A:** It mapped the detection efficiency for each $$^{30}\mathrm{Si}$$ state against beam energy and vertex position. It also showed why the ground state was almost never detected at the 20 keV counter threshold: at a given beam energy its protons are the fastest and deposit the least in the counter.
+* **Setting up the next run:** It shows that a beam entering the gas at 80 MeV places the astrophysical window over the proportional counter, and that lowering the counter threshold to 2 keV recovers the ground state and separates the 2.235 MeV state of $$^{30}\mathrm{Si}$$. At 80 MeV the states fall into four separate groups: the ground state, the 2.235 MeV state, the 3.5–3.8 MeV group, and the states from 4.8 MeV up, which remain unresolved.
+
+<table style="width:100%; border: none;">
+  <tr style="border: none;">
+    <td style="width:50%; border: none; text-align: center;">
+      <img src="/images/anasen-exvz-pc2kev-56mev.png" alt="Two-dimensional histogram of excitation energy, minus 1 to 10 MeV, against vertex z, minus 500 to 300 millimeters. A wide wedge of events spreads leftward from a diagonal edge running from 7 MeV near minus 330 millimeters to 2 MeV near minus 100 millimeters, with brighter streaks along the edge near 2.2, 3.6 and 5 MeV, and a separate band at 0 MeV extends from minus 500 to about minus 50 millimeters." style="width:100%;">
+      <br><i>(a) <sup>27</sup>Al entering the gas at 56.16 MeV, as in Run A, with a 2 keV counter threshold.</i>
+    </td>
+    <td style="width:50%; border: none; text-align: center;">
+      <img src="/images/anasen-exvz-pc2kev-80mev.png" alt="Two-dimensional histogram of excitation energy, minus 1 to 10 MeV, against vertex z, minus 500 to 300 millimeters. Four separate horizontal bands, at 0, 2.2, 3.5 to 4 and 4.5 to 7 MeV, extend from the entrance to edges at about plus 150, plus 90, plus 30 and minus 30 millimeters, with the highest band brightest near minus 100 millimeters." style="width:100%;">
+      <br><i>(b) Entering at 80 MeV, with the same threshold.</i>
+    </td>
+  </tr>
+</table>
+<p align="center"><i>Simulated excitation energy of <sup>30</sup>Si against vertex position, with the beam spot and detector resolution applied. Figures generated by James Szalkie.</i></p>

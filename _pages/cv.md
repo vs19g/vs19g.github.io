@@ -13,7 +13,10 @@ redirect_from:
 
 Education
 ======
-* Ph.D. in Nuclear Astrophysics, Florida State University, Tallahassee, FL, Present
+* Ph.D. in Physics (Nuclear Astrophysics), Florida State University, Tallahassee, FL, 2026
+  * Dissertation: *The study of (&alpha;,p) reactions using the upgraded ANASEN detector*
+  * Advisor: Prof. Ingo Wiedenhöver
+  * Defended November 3, 2026; degree conferred December 2026
 * M.S. in Physics, Florida State University, Tallahassee, FL, 2020
 * M.Sc. in Physics, BITS Pilani - Hyderabad Campus, India, 2018
   * Thesis: Digital Signal Processing for the Charged Particle Detector Array at INGA
@@ -22,12 +25,13 @@ Education
 
 Research Experience
 ======
-* **Graduate Research Assistant** | May 2020 – Present
+* **Graduate Research Assistant** | May 2020 – Dec 2026
   * John D. Fox Superconducting Linear Accelerator Laboratory, FSU
   * Supervisor: Prof. Ingo Wiedenhöver
-  * Conceptualized and implemented a novel design upgrade to the internal tracking proportional counter, demonstrating an order-of-magnitude improvement in position resolution during preliminary alpha-source calibration.
+  * Conceptualized and built TWINE, a twisted-wire upgrade of the internal tracking proportional counter. On alpha-source calibration it locates the vertex to 6.0 mm FWHM at a source position and 10.7 mm FWHM pooled over five source runs, about a threefold improvement on the 10–20 mm of the original counter.
   * Deployed the upgraded detector in three experimental campaigns measuring the $$^{27}Al(\alpha,p)$$, $$^{24}Mg(\alpha,p)$$, and $$^{17}F(\alpha,p)$$ reactions.
-  * Assisted in developing a simulation of the electric fields in the ANASEN detector; efforts on a particle Monte Carlo simulation are ongoing.
+  * Assisted in developing a simulation of the electric fields in the ANASEN detector, and used the resulting weighting fields to predict the cathode charge fraction, which reproduces the measured period and phase along each cell.
+  * Developed, with R. Tang and J. Szalkie, a Monte Carlo simulation of the reaction in the chamber, used to map detection efficiency and excitation energy against vertex position and to define the beam energy and proportional-counter threshold for the next measurement.
   * Upgraded the digital Data Acquisition (DAQ) system by integrating CAEN 1740 & 1725 digitizers alongside QDC/PHA firmware for coincident data readout using FSUDAQ.
   * Assisted in setting up the digital electronics and trigger logic for operating the SABRE array in conjunction with the SE-SPS (Super-Enge Split-Pole Spectrograph) using CoMPASS.
 
