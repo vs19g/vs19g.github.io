@@ -17,7 +17,7 @@ Along the way I built expertise in:
 * **Simulations:** Finite-element field and weighting-field calculations with Gmsh, Elmer FEM, and ParaView, analysis in ROOT and C++, and drift and avalanche modeling with Garfield++ as the next step.
 
 ### Background
-Before coming to FSU, I was a Junior Research Fellow at the **Tata Institute of Fundamental Research (TIFR)** in Mumbai, where I worked on digital signal processing for the **INGA array** and characterized $$LaBr_3(Ce)$$ detectors. I hold a dual degree from **BITS Pilani - Hyderabad** in Physics and Chemical Engineering, where my thesis focused on nanophotonics-enabled solar water desalination.
+I hold an integrated dual degree from **BITS Pilani - Hyderabad**, an M.Sc. in Physics and a B.E. in Chemical Engineering. I did my M.Sc. thesis at the **Tata Institute of Fundamental Research (TIFR)** in Mumbai, on digital signal processing for the **INGA array**, and my B.E. thesis on nanophotonics-enabled solar water desalination. After graduating, I returned to TIFR as a Junior Research Fellow and characterized $$LaBr_3(Ce)$$ detectors before coming to FSU.
 
 ### Teaching & Mentorship
 I am passionate about physics education, having served as a Teaching Assistant for College Physics (PHY 2053/2054). I have served as the **Tandem Maintenance Coordinator** at Fox Lab, where I was responsible for training incoming graduate students on laboratory safety, beamline operations, and accelerator maintenance.
